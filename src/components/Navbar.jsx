@@ -13,7 +13,9 @@ export default function Navbar() {
         <nav className="bg-white border-b shadow-sm w-screen">
             <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
                 {/* Logo */}
-                <h1 className="text-xl font-bold text-indigo-600">Landing Page</h1>
+                <NavLink to="/" className={linkClasses}>
+                    <h1 className="text-xl font-bold text-indigo-600">Landing Page</h1>
+                </NavLink>
 
                 {/* Desktop Links */}
                 <div className="hidden md:flex flex-col-12 gap-8 hover:text-indigo-600 justify-center">
