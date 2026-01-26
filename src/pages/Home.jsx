@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import Contact from './Contact'
+import ImageCarousel from '../components/ImageCarousel';
 
 export default function Home() {
     return (
@@ -7,25 +8,22 @@ export default function Home() {
             {/* Hero Section */}
             <section className="bg-white">
                 <div className="max-w-7xl mx-auto px-6 py-24 text-center">
-                    <h2 className="text-4xl font-extrabold leading-tight mb-6">
-                        Build Modern Web Experiences <br />
-                        <span className="text-indigo-600">With Confidence</span>
-                    </h2>
-                    <p className="max-w-2xl mx-auto text-gray-600 mb-8">
-                        A professional solution designed to help businesses and developers
-                        launch fast, scale efficiently, and maintain high performance.
-                    </p>
-                    <div className="flex justify-center gap-4">
+                        <h2 className="text-6xl font-semibold leading-tight mb-6">
+                            Build Modern Web Experiences <br />With <span className='text-6xl text-4xl font-bold bg-gradient-to-r from-violet-600 via-blue-600 to-teal-600 bg-clip-text text-transparent'>Confidence</span>
+                        </h2>
+                        <p className="max-w-2xl mx-auto text-gray-600 ">A professional solution designed to help businesses and developers launch fast, scale efficiently, and maintain high performance.</p>
+                        <ImageCarousel/>
+                        <div className="flex justify-center gap-4">
                         <NavLink to="/contact">
                             <button
-                                className="bg-indigo-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-indigo-700 transition"
+                                className="bg-indigo-600 text-white px-10 py-5 rounded-full font-medium hover:bg-indigo-700 transition hover:bg-gradient-to-r from-violet-600 via-blue-600 to-teal-600"
                             >
                                 Contact Us
                             </button>
                         </NavLink>
                         <NavLink to="/about">
                             <button
-                                className="border border-gray-300 px-6 py-3 rounded-lg font-medium hover:border-indigo-600 hover:text-indigo-600 transition"
+                                className="border border-black px-10 py-5 rounded-full font-medium hover:border-indigo-600 text-black hover:text-white hover:bg-gradient-to-r from-violet-600 via-blue-600 to-teal-600 transition"
                             >
                                 About us
                             </button>
@@ -42,30 +40,29 @@ export default function Home() {
                     </h3>
 
                     <div className="grid md:grid-cols-3 gap-8">
-                        <div className="bg-white p-8 rounded-xl shadow-sm">
-                            <h4 className="text-lg font-semibold mb-3">Fast Development</h4>
-                            <p className="text-gray-600">
+                        <div className="bg-white hover:bg-gradient-to-r from-violet-600 via-blue-600 to-teal-600 hover:text-white p-8 rounded-xl shadow-sm">
+                            <h4 className="text-lg font-semibold mb-3">Fast Development<span className="text-gray-600 hover:text-white">
                                 Build and ship applications quickly using modern tools and best
                                 practices.
-                            </p>
+                            </span></h4>
                         </div>
 
-                        <div className="bg-white p-8 rounded-xl shadow-sm">
+                        <div className="bg-white hover:bg-gradient-to-r from-violet-600 via-blue-600 to-teal-600 hover:text-white p-8 rounded-xl shadow-sm">
                             <h4 className="text-lg font-semibold mb-3">
                                 Scalable Architecture
-                            </h4>
-                            <p className="text-gray-600">
+                                <span className="text-gray-600 hover:text-white">
                                 Designed to grow with your business without compromising
                                 performance.
-                            </p>
+                            </span>
+                            </h4>
+                            
                         </div>
 
-                        <div className="bg-white p-8 rounded-xl shadow-sm">
-                            <h4 className="text-lg font-semibold mb-3">Secure by Design</h4>
-                            <p className="text-gray-600">
+                        <div className="bg-white hover:bg-gradient-to-r from-violet-600 via-blue-600 to-teal-600 hover:text-white p-8 rounded-xl shadow-sm">
+                            <h4 className="text-lg font-semibold mb-3">Secure by Design<span className="text-gray-600">
                                 Built with security-first principles to protect your data and
                                 users.
-                            </p>
+                            </span></h4>
                         </div>
                     </div>
                 </div>

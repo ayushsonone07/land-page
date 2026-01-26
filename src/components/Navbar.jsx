@@ -1,64 +1,121 @@
-import { useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function Navbar() {
-    const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
 
-    const linkClasses = ({ isActive }) =>
-        isActive
-            ? 'text-indigo-600 font-semibold'
-            : 'text-gray-700 hover:text-indigo-600 font-semibold'
+  const linkClasses = ({ isActive }) =>
+    isActive
+      ? "text-indigo-600 font-semibold"
+      : "text-gray-700 hover:underline hover:duration-500 ease-in-out font-semibold";
 
-    return (
-        <nav className="bg-white border-b shadow-sm w-screen">
-            <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-                {/* Logo */}
-                <NavLink to="/" className={linkClasses}>
-                    <h1 className="text-xl font-bold text-indigo-600">Landing Page</h1>
-                </NavLink>
+  const navItemClass = ({ isActive }) =>
+    `relative inline-block font-semibold transition-colors duration-300
+      ${isActive ? "text-black" : "text-gray-700 hover:text-black"}
+      after:content-[''] after:absolute after:left-0 after:-bottom-1
+      after:h-[2px] after:w-0 after:bg-indigo-600
+      after:transition-all after:duration-300
+      hover:after:w-full
+      ${isActive ? "after:w-full" : ""}`;
+      
 
-                {/* Desktop Links */}
-                <div className="hidden md:flex flex-col-12 gap-8 hover:text-indigo-600 justify-center">
-                    <NavLink to="/" className={linkClasses}>Home</NavLink>
-                    <NavLink to="/about" className={linkClasses}>About</NavLink>
-                    <NavLink to="/contact" className={linkClasses}>Contact Us</NavLink>
-                </div>
+  return (
+    <nav className="bg-white border-b shadow-sm w-screen fixed top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 py-4 grid grid-cols-12 gap-4 items-center">
+        {/* Logo */}
+        <div className="col-span-10 md:col-span-2 flex justify-start items-center">
+          <NavLink to="/" className={linkClasses}>
+            <h1 className="text-xl font-bold text-indigo-700">
+              Landing Page
+            </h1>
+          </NavLink>
+        </div>
 
-                {/* Mobile Button */}
-                <button
-                    className="md:hidden text-2xl"
-                    onClick={() => setOpen(!open)}
-                >
-                    ☰
-                </button>
+        {/* Desktop Links */}
+        <div className="hidden md:flex md:col-span-8 gap-14 justify-center items-center">
+          <NavLink to="/" className={navItemClass}>Home</NavLink>
+          <NavLink to="/about" className={navItemClass}>About</NavLink>
+          <NavLink to="/services" className={navItemClass}>Services</NavLink>
+        </div>
+
+        {/* Desktop CTA */}
+        <div className="hidden md:flex md:col-span-2 justify-end items-end">
+          <NavLink
+            to="https://wa.me/+916232933046"
+            className="bg-indigo-600 px-7 py-3 rounded-lg text-white hover:bg-indigo-700 transition font-semibold"
+          >
+            <div className="flex flex-row gap-3 jusitfy-center items-center">
+             <span><FaWhatsapp /></span>
+             <span>Get in touch</span>
             </div>
+          </NavLink>
+        </div>
 
-            {/* Mobile Menu */}
-            {open && (
-                <div className="md:hidden bg-white border-t">
-                    <NavLink
-                        to="/"
-                        onClick={() => setOpen(false)}
-                        className="block px-4 py-3 border-b"
-                    >
-                        Home
-                    </NavLink>
-                    <NavLink
-                        to="/about"
-                        onClick={() => setOpen(false)}
-                        className="block px-4 py-3 border-b"
-                    >
-                        About
-                    </NavLink>
-                    <NavLink
-                        to="/contact"
-                        onClick={() => setOpen(false)}
-                        className="block px-4 py-3"
-                    >
-                        Contact Us
-                    </NavLink>
-                </div>
-            )}
-        </nav>
-    )
+        {/* Mobile Toggle Button */}
+        <button
+          onClick={() => setOpen(!open)}
+          className="md:hidden col-span-2 relative w-8 h-8"
+          aria-label="Toggle menu"
+        >
+          {/* Line 1 */}
+          <span
+            className={`absolute left-0 top-2 w-full h-0.5 bg-gray-800 transition-all duration-300 ${
+              open ? "rotate-45 top-4" : ""
+            }`}
+          />
+          {/* Line 2 */}
+          <span
+            className={`absolute left-0 top-4 w-full h-0.5 bg-gray-800 transition-opacity duration-300 ${
+              open ? "opacity-0" : "opacity-100"
+            }`}
+          />
+          {/* Line 3 */}
+          <span
+            className={`absolute left-0 top-6 w-full h-0.5 bg-gray-800 transition-all duration-300 ${
+              open ? "-rotate-45 top-4" : ""
+            }`}
+          />
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      <div
+        className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+          open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="bg-white border-t flex flex-col">
+          <NavLink
+            to="/"
+            onClick={() => setOpen(false)}
+            className="px-4 py-3 border-b hover:bg-gray-50"
+          >
+            Home
+          </NavLink>
+          <NavLink
+            to="/about"
+            onClick={() => setOpen(false)}
+            className="px-4 py-3 border-b hover:bg-gray-50"
+          >
+            About
+          </NavLink>
+          <NavLink
+            to="/services"
+            onClick={() => setOpen(false)}
+            className="px-4 py-3 border-b hover:bg-gray-50"
+          >
+            Services
+          </NavLink>
+          <NavLink
+            to="/contact"
+            onClick={() => setOpen(false)}
+            className="px-4 py-3 hover:bg-gray-50"
+          >
+            Contact Us
+          </NavLink>
+        </div>
+      </div>
+    </nav>
+  );
 }
