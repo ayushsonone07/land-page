@@ -1,111 +1,120 @@
+import { NavLink } from "react-router-dom";
+
 const services = [
-    "Web Development",
-    "Frontend Engineering",
-    "Backend APIs",
-    "Full Stack Solutions",
-    "UI/UX Optimization",
-    "Performance Tuning",
-    "SEO-Friendly Apps",
-    "Scalable Architecture",
-  ];
-  
+  {
+    title: "Web Development",
+    description:
+      "High-performance, scalable web applications built with modern technologies.",
+    image:
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+  },
+  {
+    title: "UI / UX Design",
+    description:
+      "User-centered designs focused on clarity, usability, and conversion.",
+    image:
+      "https://images.unsplash.com/photo-1559028012-481c04fa702d",
+  },
+  {
+    title: "Backend & APIs",
+    description:
+      "Secure, scalable backend systems and REST / GraphQL APIs.",
+    image:
+      "https://images.unsplash.com/photo-1555949963-aa79dcee981c",
+  },
+  {
+    title: "Performance Optimization",
+    description:
+      "Improve speed, SEO, and overall user experience.",
+    image:
+      "https://images.unsplash.com/photo-1518770660439-4636190af475",
+  },
+  {
+    title: "Cloud & Deployment",
+    description:
+      "Reliable deployment pipelines and cloud infrastructure setup.",
+    image:
+      "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
+  },
+  {
+    title: "Maintenance & Support",
+    description:
+      "Continuous monitoring, updates, and long-term support.",
+    image:
+      "https://images.unsplash.com/photo-1581090700227-1e37b190418e",
+  },
+];
+
 export default function Services() {
-    return (
-      <div className="bg-gray-50 text-gray-800 overflow-hidden">
-        {/* Header */}
-        <section className="bg-white border-b">
-          <div className="max-w-7xl mx-auto px-6 py-20 text-center">
-            <h1 className="text-4xl font-extrabold mb-4">Our Services</h1>
-            <p className="max-w-2xl mx-auto text-gray-600">
-              We provide end-to-end digital services focused on quality,
-              scalability, and long-term value.
-            </p>
-          </div>
-        </section>
-  
-        {/* Marquee */}
-        <section className="bg-indigo-600 py-6">
-          <div className="relative flex overflow-hidden">
-            <div className="animate-marquee whitespace-nowrap flex gap-12 text-white text-lg font-medium">
-              {services.map((service, index) => (
-                <span key={index}>{service}</span>
-              ))}
-            </div>
-  
-            <div
-              className="absolute top-0 animate-marquee2 whitespace-nowrap flex gap-12 text-white text-lg font-medium"
-              aria-hidden="true"
-            >
-              {services.map((service, index) => (
-                <span key={index}>{service}</span>
-              ))}
-            </div>
-          </div>
-        </section>
-  
-        {/* Services Grid */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-6">
-            <h2 className="text-3xl font-bold text-center mb-12">
-              What We Offer
-            </h2>
-  
-            <div className="grid md:grid-cols-3 gap-8">
-              <ServiceCard
-                title="Frontend Development"
-                description="Modern, responsive, and accessible user interfaces built with React and modern CSS frameworks."
-              />
-              <ServiceCard
-                title="Backend Development"
-                description="Secure, scalable APIs and server-side logic using Node.js and modern backend practices."
-              />
-              <ServiceCard
-                title="Full Stack Solutions"
-                description="Complete product development from database design to frontend deployment."
-              />
-              <ServiceCard
-                title="Performance Optimization"
-                description="Improving application speed, SEO, and overall user experience."
-              />
-              <ServiceCard
-                title="UI/UX Consulting"
-                description="Design-focused guidance to ensure clarity, usability, and consistency."
-              />
-              <ServiceCard
-                title="Maintenance & Support"
-                description="Ongoing improvements, bug fixes, and performance monitoring."
-              />
-            </div>
-          </div>
-        </section>
-  
-        {/* CTA */}
-        <section className="bg-indigo-600 text-white py-20">
-          <div className="max-w-4xl mx-auto px-6 text-center">
-            <h2 className="text-3xl font-bold mb-6">
-              Let’s Work Together
-            </h2>
-            <p className="mb-8 text-indigo-100">
-              Tell us about your project and we’ll help you turn your ideas into
-              reality.
-            </p>
-            <a
-              href="/contact"
-              className="inline-block bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition"
-            >
-              Contact Us
-            </a>
-          </div>
-        </section>
-      </div>
-    );
-  };
-  
-const ServiceCard = ({ title, description }) => {
-    return (
-        <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition">
-            <h3 className="text-lg font-semibold mb-3">{title}</h3>
-            <p className="text-gray-600 leading-relaxed">{description}</p>
+  return (
+    <div className="bg-gray-50 text-gray-800">
+      {/* Header */}
+      <section className="bg-white border-b">
+        <div className="max-w-7xl mx-auto px-6 pt-32 text-center">
+          <h2 className="text-6xl font-semibold leading-tight mb-6">
+            Build your persona <br />With our, <span className='text-6xl text-4xl font-bold bg-gradient-to-r from-violet-600 via-blue-600 to-teal-600 bg-clip-text text-transparent'>Services</span>
+          </h2>
+          <p className="max-w-2xl mx-auto text-gray-600">
+            We provide end-to-end digital services to help businesses
+            build, scale, and succeed.
+          </p>
         </div>
-    );
-};  
+      </section>
+
+      {/* Services Grid */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {services.map((service, index) => (
+              <div
+                key={index}
+                className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300"
+              >
+                {/* Image */}
+                <div className="h-48 overflow-hidden">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+
+                {/* Content */}
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold mb-3">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-600 mb-4">
+                    {service.description}
+                  </p>
+
+                  <button className="text-indigo-600 font-semibold hover:underline">
+                    Learn More →
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-24 bg-gradient-to-r from-indigo-600 to-purple-600">
+        <div className="max-w-4xl mx-auto px-6 text-center text-white">
+        <h2 className="text-4xl font-bold mb-6">
+            Let’s Build Something Great Together
+        </h2>
+        <p className="text-lg opacity-90 mb-10">
+            Have an idea or project in mind? We’d love to collaborate and bring
+            it to life.
+        </p>
+        <NavLink to="/contact">
+            <button className="bg-white text-indigo-600 px-8 py-4 rounded-xl font-semibold shadow-lg hover:scale-105 transition">
+                Contact Us
+            </button>
+        </NavLink>
+        </div>
+    </section>
+    </div>
+  );
+}

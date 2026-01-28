@@ -2,122 +2,109 @@ import { NavLink } from "react-router-dom";
 
 export default function About() {
     return (
-        <div className="bg-gray-50 text-gray-800">
-            {/* Page Header */}
-            <section className="bg-white border-b">
-                <div className="max-w-7xl mx-auto px-6 py-20 text-center">
-                    <h1 className="text-4xl font-extrabold mb-4">About Us</h1>
-                    <p className="max-w-2xl mx-auto text-gray-600">
-                        We build reliable, scalable, and modern digital solutions that help
-                        businesses grow with confidence.
-                    </p>
-                </div>
-            </section>
+        <main className="bg-gradient-to-br from-indigo-50 via-white to-purple-50">
+      
+      {/* Hero Section */}
+      <section className="py-24">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          
+          <div>
+            <h1 className="text-5xl font-extrabold leading-tight bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+              Building Digital Experiences That Matter
+            </h1>
+            <p className="mt-6 text-lg text-gray-600 leading-relaxed">
+              We are a team of developers and designers focused on creating
+              scalable, high-performance web applications using modern
+              technologies and clean architecture principles.
+            </p>
+          </div>
 
-            {/* Who We Are */}
-            <section className="py-20">
-                <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <h2 className="text-3xl font-bold mb-6">Who We Are</h2>
-                        <p className="text-gray-600 leading-relaxed mb-4">
-                            We are a technology-driven team focused on delivering high-quality
-                            web applications using modern frameworks and best engineering
-                            practices. Our goal is to create products that are efficient,
-                            secure, and easy to maintain.
-                        </p>
-                        <p className="text-gray-600 leading-relaxed">
-                            With a strong emphasis on clean architecture and performance, we
-                            help startups and businesses transform ideas into production-ready
-                            solutions.
-                        </p>
-                    </div>
-
-                    <div className="bg-white p-10 rounded-xl shadow-sm">
-                        <h3 className="text-xl font-semibold mb-4">What We Stand For</h3>
-                        <ul className="space-y-3 text-gray-600">
-                            <li>• Clean and maintainable code</li>
-                            <li>• Scalable and future-proof architecture</li>
-                            <li>• Strong focus on user experience</li>
-                            <li>• Transparent and professional communication</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            {/* Mission & Vision */}
-            <section className="bg-white py-20">
-                <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12">
-                    <div className="p-8 rounded-xl border">
-                        <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
-                        <p className="text-gray-600 leading-relaxed">
-                            To empower businesses by building reliable digital products that
-                            solve real-world problems and deliver long-term value.
-                        </p>
-                    </div>
-
-                    <div className="p-8 rounded-xl border">
-                        <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
-                        <p className="text-gray-600 leading-relaxed">
-                            To become a trusted technology partner known for quality,
-                            innovation, and consistency across every project we deliver.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            {/* Values */}
-            <section className="py-20">
-                <div className="max-w-7xl mx-auto px-6">
-                    <h2 className="text-3xl font-bold text-center mb-12">
-                        Our Core Values
-                    </h2>
-
-                    <div className="grid md:grid-cols-3 gap-8">
-                        <div className="bg-white p-8 rounded-xl shadow-sm">
-                            <h4 className="text-lg font-semibold mb-3">Quality First</h4>
-                            <p className="text-gray-600">
-                                We prioritize quality in every line of code and every decision
-                                we make.
-                            </p>
-                        </div>
-
-                        <div className="bg-white p-8 rounded-xl shadow-sm">
-                            <h4 className="text-lg font-semibold mb-3">Reliability</h4>
-                            <p className="text-gray-600">
-                                Our solutions are built to be stable, secure, and dependable in
-                                real-world environments.
-                            </p>
-                        </div>
-
-                        <div className="bg-white p-8 rounded-xl shadow-sm">
-                            <h4 className="text-lg font-semibold mb-3">Continuous Growth</h4>
-                            <p className="text-gray-600">
-                                We continuously learn, adapt, and improve to stay ahead in a
-                                fast-evolving tech landscape.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* CTA */}
-            <section className="bg-indigo-600 text-white py-20">
-                <div className="max-w-4xl mx-auto px-6 text-center">
-                    <h2 className="text-3xl font-bold mb-6">
-                        Let’s Build Something Meaningful
-                    </h2>
-                    <p className="mb-8 text-indigo-100">
-                        Whether you’re a startup or an established business, we’re ready to
-                        help you bring your ideas to life.
-                    </p>
-                    <NavLink to="/contact">
-                        <button className="inline-block bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
-                            Get in Touch
-                        </button>
-                    </NavLink>
-                </div>
-            </section>
+          {/* Illustration */}
+          <div className="relative">
+            <div className="absolute -inset-4 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-3xl blur-2xl opacity-20"></div>
+            <img
+              src="https://illustrations.popsy.co/gray/web-design.svg"
+              alt="Team Illustration"
+              className="relative rounded-3xl shadow-xl"
+            />
+          </div>
         </div>
+      </section>
+
+      {/* About Card Section */}
+      <section className="py-20">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="rounded-3xl bg-white/80 backdrop-blur-xl shadow-xl border border-white/20 p-10 md:p-16 text-center">
+            <h2 className="text-4xl font-bold mb-6">Who We Are</h2>
+            <p className="text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto">
+              We specialize in crafting modern digital products using React,
+              Next.js, Node.js, and scalable backend systems. Our mission is to
+              deliver clean, maintainable solutions with a strong focus on user
+              experience and long-term growth.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Values Section */}
+      <section className="py-24">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="text-4xl font-bold text-center mb-16">
+            Our Core Values
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            
+            {[
+              {
+                title: "Clean Code",
+                desc: "Maintainable, scalable, and readable codebases following best practices.",
+                icon: "🧩",
+              },
+              {
+                title: "User-Centered Design",
+                desc: "Interfaces designed with clarity, accessibility, and usability in mind.",
+                icon: "🎯",
+              },
+              {
+                title: "Performance First",
+                desc: "Fast-loading, SEO-friendly applications optimized for all devices.",
+                icon: "⚡",
+              },
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="rounded-2xl bg-white shadow-lg p-8 text-center hover:-translate-y-1 transition-transform"
+              >
+                <div className="text-4xl mb-4">{item.icon}</div>
+                <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+                <p className="text-gray-600">{item.desc}</p>
+              </div>
+            ))}
+
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-24 bg-gradient-to-r from-indigo-600 to-purple-600">
+        <div className="max-w-4xl mx-auto px-6 text-center text-white">
+        <h2 className="text-4xl font-bold mb-6">
+            Let’s Build Something Great Together
+        </h2>
+        <p className="text-lg opacity-90 mb-10">
+            Have an idea or project in mind? We’d love to collaborate and bring
+            it to life.
+        </p>
+        <NavLink to="/contact">
+            <button className="bg-white text-indigo-600 px-8 py-4 rounded-xl font-semibold shadow-lg hover:scale-105 transition">
+                Contact Us
+            </button>
+        </NavLink>
+        </div>
+    </section>
+
+    </main>
     );
 }
 

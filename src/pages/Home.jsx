@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import Contact from './Contact'
 import ImageCarousel from '../components/ImageCarousel';
+import Accordian from "../components/Accordion"
 
 export default function Home() {
     return (
@@ -33,68 +34,112 @@ export default function Home() {
             </section>
 
             {/* Features */}
-            <section id="features" className="py-20">
+            <section
+                id="features"
+                className="py-28 bg-gradient-to-b from-gray-50 to-white"
+                >
                 <div className="max-w-7xl mx-auto px-6">
-                    <h3 className="text-3xl font-bold text-center mb-12">
+                    {/* Section Header */}
+                    <div className="text-center max-w-3xl mx-auto mb-20">
+                    <h3 className="text-4xl font-extrabold mb-4">
                         Why Choose Our Platform
                     </h3>
+                    <p className="text-gray-600 text-lg">
+                        Built with modern technologies, performance, and scalability in mind.
+                    </p>
+                    </div>
 
-                    <div className="grid md:grid-cols-3 gap-8">
-                        <div className="bg-white hover:bg-gradient-to-r from-violet-600 via-blue-600 to-teal-600 hover:text-white p-8 rounded-xl shadow-sm">
-                            <h4 className="text-lg font-semibold mb-3">Fast Development<span className="text-gray-600 hover:text-white">
-                                Build and ship applications quickly using modern tools and best
-                                practices.
-                            </span></h4>
-                        </div>
+                    {/* Feature Cards */}
+                    <div className="grid gap-10 md:grid-cols-3">
+                    {[
+                        {
+                        title: "Fast Development",
+                        desc: "Build and ship applications rapidly using proven tools and best practices.",
+                        icon: "⚡",
+                        },
+                        {
+                        title: "Scalable Architecture",
+                        desc: "Future-ready systems that scale seamlessly as your business grows.",
+                        icon: "📈",
+                        },
+                        {
+                        title: "Secure by Design",
+                        desc: "Security-first approach to safeguard your users and data.",
+                        icon: "🔒",
+                        },
+                    ].map((feature, i) => (
+                        <div
+                        key={i}
+                        className="group relative rounded-2xl p-[1px] bg-gradient-to-r from-violet-600 via-blue-600 to-teal-600"
+                        >
+                        <div className="h-full rounded-2xl bg-white p-8 transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-2xl">
+                            {/* Icon */}
+                            <div className="w-12 h-12 flex items-center justify-center rounded-xl mb-6 bg-gradient-to-r from-violet-600 via-blue-600 to-teal-600 text-white text-xl">
+                            {feature.icon}
+                            </div>
 
-                        <div className="bg-white hover:bg-gradient-to-r from-violet-600 via-blue-600 to-teal-600 hover:text-white p-8 rounded-xl shadow-sm">
-                            <h4 className="text-lg font-semibold mb-3">
-                                Scalable Architecture
-                                <span className="text-gray-600 hover:text-white">
-                                Designed to grow with your business without compromising
-                                performance.
-                            </span>
+                            {/* Content */}
+                            <h4 className="text-xl font-semibold mb-3 group-hover:text-indigo-600 transition">
+                            {feature.title}
                             </h4>
-                            
-                        </div>
 
-                        <div className="bg-white hover:bg-gradient-to-r from-violet-600 via-blue-600 to-teal-600 hover:text-white p-8 rounded-xl shadow-sm">
-                            <h4 className="text-lg font-semibold mb-3">Secure by Design<span className="text-gray-600">
-                                Built with security-first principles to protect your data and
-                                users.
-                            </span></h4>
+                            <p className="text-gray-600 leading-relaxed">
+                            {feature.desc}
+                            </p>
+
+                            {/* Hover underline */}
+                            <div className="mt-6 h-[2px] w-0 bg-gradient-to-r from-violet-600 to-teal-600 group-hover:w-full transition-all duration-300" />
                         </div>
+                        </div>
+                    ))}
                     </div>
                 </div>
             </section>
 
+
             {/* About */}
-            <section id="about" className="bg-white py-20">
-                <div className="max-w-4xl mx-auto px-6 text-center">
-                    <h3 className="text-3xl font-bold mb-6">About Us</h3>
-                    <p className="text-gray-600 leading-relaxed">
-                        We specialize in building high-quality digital products using modern
-                        web technologies. Our focus is on clean architecture, maintainable
-                        code, and exceptional user experience.
-                    </p>
+            <section
+                id="about"
+                className="relative py-24 bg-gradient-to-br from-indigo-50 via-white to-purple-50"
+                >
+                <div className="max-w-5xl mx-auto px-6">
+                    <div className="relative overflow-hidden rounded-3xl bg-white/80 backdrop-blur-xl shadow-xl border border-white/20">
+                    
+                    {/* Gradient Accent */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-purple-500/10" />
+
+                    <div className="relative p-10 md:p-16 text-center">
+                        <h3 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                        About Us
+                        </h3>
+
+                        <p className="mt-6 text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+                        We specialize in building high-quality digital products using modern web
+                        technologies. Our approach emphasizes clean architecture, maintainable
+                        codebases, and intuitive user experiences that scale with your business.
+                        </p>
+                    </div>
+                    </div>
                 </div>
-            </section>
+                </section>
+
+            <Accordian />
 
             {/* Call to Action */}
-            <section
-                id="contact"
-                className="py-20 bg-indigo-600 text-white"
-            >
-                <div className="max-w-4xl mx-auto px-6 text-center">
-                    <h3 className="text-3xl font-bold mb-6">
-                        Ready to Start Your Project?
-                    </h3>
-                    <p className="mb-8 text-indigo-100">
-                        Get in touch today and let’s build something great together.
-                    </p>
-                    <NavLink to="/contact" className="inline-block bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+            <section className="py-24 bg-gradient-to-r from-indigo-600 to-purple-600">
+                <div className="max-w-4xl mx-auto px-6 text-center text-white">
+                <h2 className="text-4xl font-bold mb-6">
+                    Let’s Build Something Great Together
+                </h2>
+                <p className="text-lg opacity-90 mb-10">
+                    Have an idea or project in mind? We’d love to collaborate and bring
+                    it to life.
+                </p>
+                <NavLink to="/contact">
+                    <button className="bg-white text-indigo-600 px-8 py-4 rounded-xl font-semibold shadow-lg hover:scale-105 transition">
                         Contact Us
-                    </NavLink>
+                    </button>
+                </NavLink>
                 </div>
             </section>
 
