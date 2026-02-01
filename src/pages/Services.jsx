@@ -58,7 +58,6 @@ export default function Services() {
           Automate, engage, and grow - starting today.</p>
         </div>
       </section>
-      <TeamOfAgentsHero/>
       {/* Services Grid */}
       {/* <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">
