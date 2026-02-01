@@ -58,7 +58,7 @@ export default function Hero() {
       </h1>
 
       {/* Subtext */}
-      <p className="mt-6 text-gray-800 text-lg font-medium">
+      <p className="mt-6 text-black text-lg font-medium">
         Trusted by 60,000+ business owners
       </p>
 

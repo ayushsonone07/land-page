@@ -49,54 +49,52 @@ export default function Services() {
   return (
     <div className="bg-gray-50 text-gray-800">
       {/* Header */}
-      <section className="bg-white border-b">
+      <section className="bg-white my-4">
         <div className="max-w-7xl mx-auto px-6 pt-32 text-center">
-          <h2 className="text-6xl font-semibold leading-tight mb-6">
-            Build your persona <br />With our, <span className='text-6xl text-4xl font-bold bg-gradient-to-r from-violet-600 via-blue-600 to-teal-600 bg-clip-text text-transparent'>Services</span>
+          <h2 className="text-5xl font-bold leading-tight mb-6">
+          Everything You Need to <span className='text-5xl text-4xl font-bold bg-gradient-to-r from-violet-600 via-blue-600 to-teal-600 bg-clip-text text-transparent'>Grow Your <br/>Business</span>
           </h2>
-          <p className="max-w-2xl mx-auto text-gray-600">
-            We provide end-to-end digital services to help businesses
-            build, scale, and succeed.
-          </p>
+          <p className="text-lg text-black mx-auto">One simple pricing for all AI Agents for maximum revenue.<br/>
+          Automate, engage, and grow - starting today.</p>
         </div>
       </section>
-
+      <TeamOfAgentsHero/>
       {/* Services Grid */}
-      <section className="py-20">
+      {/* <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {services.map((service, index) => (
-              <div
+            {services.map((service, index) => ( */}
+              {/* <div
                 key={index}
                 className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300"
-              >
+              > */}
                 {/* Image */}
-                <div className="h-48 overflow-hidden">
-                  <img
+                {/* <div className="h-48 overflow-hidden"> */}
+                  {/* <img
                     src={service.image}
                     alt={service.title}
                     className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                </div>
+                </div> */}
 
                 {/* Content */}
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-3">
-                    {service.title}
-                  </h3>
+                {/* <div className="p-6">
+                  <h3 className="text-xl font-semibold mb-3"> */}
+                    {/* {service.title} */}
+                  {/* </h3>
                   <p className="text-gray-600 mb-4">
-                    {service.description}
-                  </p>
+                    {service.description} */}
+                  {/* </p> */}
 
-                  <button className="text-indigo-600 font-semibold hover:underline">
+                  {/* <button className="text-indigo-600 font-semibold hover:underline">
                     Learn More →
                   </button>
                 </div>
-              </div>
-            ))}
+              </div> */}
+            {/* ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA */}
       <section className="py-24 bg-gradient-to-r from-indigo-600 to-purple-600">

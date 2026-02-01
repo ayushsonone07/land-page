@@ -293,3 +293,158 @@ export function HeroCTA() {
     </section>
   );
 }
+
+export function HeroCTA2() {
+  return (
+    <section className="py-16 px-4">
+      <div className="max-w-7xl mx-auto">
+        <div className="relative rounded-[32px] overflow-hidden bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-400 p-8 md:p-12 lg:p-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            
+            {/* Left Content */}
+            <div className="z-10 relative">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                Marketing that actually delivers revenue.
+              </h2>
+              <p className="text-xl md:text-2xl text-white/90 mb-8 font-medium">
+                No stress. No guesswork. Just real growth!
+              </p>
+              <button className="inline-flex items-center gap-3 bg-white hover:bg-gray-100 text-gray-900 font-semibold px-8 py-4 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105">
+                <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+                Book Free Demo
+              </button>
+            </div>
+
+            {/* Right Phone Mockup */}
+            <div className="relative z-10 flex justify-center lg:justify-end">
+              <div className="relative w-full max-w-[320px]">
+                {/* Phone Frame */}
+                <div className="relative bg-black rounded-[40px] p-3 shadow-2xl">
+                  {/* Notch */}
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-7 bg-black rounded-b-3xl z-20"></div>
+                  
+                  {/* Screen */}
+                  <div className="bg-white rounded-[32px] overflow-hidden">
+                    {/* Status Bar */}
+                    <div className="bg-white px-6 py-3 flex justify-between items-center">
+                      <span className="text-xs font-semibold text-gray-900">10:30</span>
+                      <div className="flex gap-1 items-center">
+                        <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/>
+                        </svg>
+                        <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.33C7 21.4 7.6 22 8.33 22h7.33c.74 0 1.34-.6 1.34-1.33V5.33C17 4.6 16.4 4 15.67 4z"/>
+                        </svg>
+                      </div>
+                    </div>
+
+                    {/* Google Business Profile Header */}
+                    <div className="px-4 py-3 border-b border-gray-200">
+                      <div className="flex justify-between items-center mb-3">
+                        <div>
+                          <h3 className="font-semibold text-gray-900 text-sm">Google Business Profile</h3>
+                          <p className="text-xs text-gray-500">Vashi, Navi Mumbai</p>
+                        </div>
+                        <button className="p-1">
+                          <svg className="w-5 h-5 text-gray-600" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
+                          </svg>
+                        </button>
+                      </div>
+                      
+                      {/* Tabs */}
+                      <div className="flex gap-4 text-xs">
+                        <button className="pb-2 border-b-2 border-blue-600 text-blue-600 font-medium">Overview</button>
+                        <button className="pb-2 text-gray-500">Performance</button>
+                        <button className="pb-2 text-gray-500">Posts</button>
+                        <button className="pb-2 text-gray-500">Reviews</button>
+                      </div>
+                    </div>
+
+                    {/* Impact Card */}
+                    <div className="p-4">
+                      <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-xl p-4 border border-green-200">
+                        <div className="flex items-center gap-2 mb-3">
+                          <svg className="w-5 h-5 text-blue-600" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                          </svg>
+                          <span className="text-xs font-semibold text-gray-900">GBP - Grexa AI Impact</span>
+                        </div>
+                        
+                        <div className="flex items-baseline gap-1 mb-3">
+                          <span className="text-3xl font-bold text-green-600">43%</span>
+                          <span className="text-xs text-gray-600">increase in monthly GBP interaction</span>
+                        </div>
+
+                        {/* Stats Bars */}
+                        <div className="grid grid-cols-3 gap-3">
+                          {/* Views */}
+                          <div>
+                            <div className="text-xs text-gray-600 mb-1">Views</div>
+                            <div className="text-green-600 text-xs font-semibold mb-2">+ 74%</div>
+                            <div className="space-y-1">
+                              <div className="bg-orange-400 h-16 rounded-t" style={{height: '50px'}}></div>
+                              <div className="bg-blue-400 h-20 rounded-t" style={{height: '80px'}}></div>
+                            </div>
+                            <div className="text-xs text-gray-500 mt-1 text-center">
+                              <div>417</div>
+                              <div className="text-orange-600">Aug/Sept</div>
+                              <div className="mt-1">725</div>
+                              <div className="text-blue-600">Sept/Oct</div>
+                            </div>
+                          </div>
+
+                          {/* Calls */}
+                          <div>
+                            <div className="text-xs text-gray-600 mb-1">Calls</div>
+                            <div className="text-green-600 text-xs font-semibold mb-2">+ 52%</div>
+                            <div className="space-y-1">
+                              <div className="bg-orange-400 h-16 rounded-t" style={{height: '55px'}}></div>
+                              <div className="bg-blue-400 h-20 rounded-t" style={{height: '85px'}}></div>
+                            </div>
+                            <div className="text-xs text-gray-500 mt-1 text-center">
+                              <div>236</div>
+                              <div className="text-orange-600">Aug/Sept</div>
+                              <div className="mt-1">381</div>
+                              <div className="text-blue-600">Sept/Oct</div>
+                            </div>
+                          </div>
+
+                          {/* Directions */}
+                          <div>
+                            <div className="text-xs text-gray-600 mb-1">Directions</div>
+                            <div className="text-green-600 text-xs font-semibold mb-2">+ 120%</div>
+                            <div className="space-y-1">
+                              <div className="bg-orange-400 h-16 rounded-t" style={{height: '40px'}}></div>
+                              <div className="bg-blue-400 h-20 rounded-t" style={{height: '90px'}}></div>
+                            </div>
+                            <div className="text-xs text-gray-500 mt-1 text-center">
+                              <div>87</div>
+                              <div className="text-orange-600">Aug/Sept</div>
+                              <div className="mt-1">191</div>
+                              <div className="text-blue-600">Sept/Oct</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Phone Shadow */}
+                <div className="absolute inset-0 bg-black/20 blur-2xl -z-10 scale-95"></div>
+              </div>
+            </div>
+          </div>
+
+          {/* Background Decoration Circles */}
+          <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl -z-0"></div>
+          <div className="absolute bottom-0 left-0 w-80 h-80 bg-purple-400/20 rounded-full blur-3xl -z-0"></div>
+        </div>
+      </div>
+    </section>
+  );
+}

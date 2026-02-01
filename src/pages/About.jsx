@@ -1,7 +1,9 @@
 import { NavLink } from "react-router-dom";
-import Hero from "../components/Hero"
 import about from "../assets/about-us.webp"
 import WhyWeStarted from "../components/WhyWeStarted"
+import TeamGallary from "../components/TeamGallery"
+import {HeroCTA2} from "../components/Teamofagentshero"
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function About() {
     return (
@@ -27,31 +29,31 @@ export default function About() {
       <div className="max-w-6xl mx-auto">
         
         {/* Main Heading */}
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-gray-900 mb-6">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center text-gray-900 mb-6">
           We're Building for Small Business Owners
         </h2>
 
         {/* Description */}
-        <p className="text-lg md:text-xl text-center text-gray-600 mb-12 max-w-4xl mx-auto leading-relaxed">
+        <p className="text-lg md:text-2xl text-center text-gray-600 mb-12 max-w-4xl mx-auto leading-relaxed font-bold">
           93% of small business owners struggle to manage their marketing. They are losing customers to bigger brands and chains. Grexa empowers them the tech advantage they've never had, to grow and compete with confidence.
         </p>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-2 mb-12">
           
           {/* Stat 1 */}
           <div className="text-center">
-            <h3 className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">
+            <h3 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-violet-600 via-blue-600 to-teal-600 bg-clip-text text-transparent mb-2">
               2.3+ Crore
             </h3>
-            <p className="text-base md:text-lg text-gray-700 font-medium">
+            <p className="text-base md:text-lg  font-medium">
               Micro Businesses in India
             </p>
           </div>
 
           {/* Stat 2 */}
           <div className="text-center">
-            <h3 className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">
+            <h3 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-violet-600 via-blue-600 to-teal-600 bg-clip-text text-transparent mb-2">
               32%+
             </h3>
             <p className="text-base md:text-lg text-gray-700 font-medium">
@@ -61,7 +63,7 @@ export default function About() {
 
           {/* Stat 3 */}
           <div className="text-center">
-            <h3 className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">
+            <h3 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-violet-600 via-blue-600 to-teal-600 bg-clip-text text-transparent mb-2">
               90%+
             </h3>
             <p className="text-base md:text-lg text-gray-700 font-medium">
@@ -73,18 +75,16 @@ export default function About() {
         {/* CTA Button */}
         <div className="flex justify-center">
           <button className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3.5 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105">
-            <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <circle cx="12" cy="12" r="10"/>
-              <polyline points="12 6 12 12 16 14"/>
-            </svg>
+            <FaWhatsapp/>
             Book Free Demo
           </button>
         </div>
-
       </div>
     </section>
 
     <WhyWeStarted/>
+    <TeamGallary/>
+    <HeroCTA2/>
 
       {/* About Card Section */}
       {/* <section className="py-20">
@@ -102,15 +102,15 @@ export default function About() {
       </section> */}
 
       {/* Values Section */}
-      <section className="py-24">
+      {/* <section className="py-24">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-16">
             Our Core Values
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            
-            {[
+             */}
+            {/* {[
               {
                 title: "Clean Code",
                 desc: "Maintainable, scalable, and readable codebases following best practices.",
@@ -135,13 +135,13 @@ export default function About() {
                 <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
                 <p className="text-gray-600">{item.desc}</p>
               </div>
-            ))}
+            ))} */}
 
-          </div>
+          {/* </div>
         </div>
-      </section>
+      </section> */}
       {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-r from-indigo-600 to-purple-600">
+      {/* <section className="py-24 bg-gradient-to-r from-indigo-600 to-purple-600">
         <div className="max-w-4xl mx-auto px-6 text-center text-white">
         <h2 className="text-4xl font-bold mb-6">
             Let’s Build Something Great Together
@@ -157,7 +157,7 @@ export default function About() {
         </NavLink>
         </div>
     </section>
-
+ */}
     </main>
     );
 }
