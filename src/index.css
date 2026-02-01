@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@theme {
+    --color-aiblue-100:#4867fa;
+    --color-aiblue-200: #045ccc;
+}
+
 body {
     @apply font-sans;
 }

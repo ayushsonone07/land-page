@@ -7,14 +7,14 @@ export default function Navbar() {
 
   const linkClasses = ({ isActive }) =>
     isActive
-      ? "text-indigo-600 font-semibold"
-      : "text-gray-700 hover:underline hover:duration-500 ease-in-out font-semibold";
+      ? "text-black font-semibold"
+      : "text-gray-700 hover:underline decoration-4 hover:duration-500 ease-in-out font-semibold";
 
   const navItemClass = ({ isActive }) =>
     `relative inline-block font-semibold transition-colors duration-300
       ${isActive ? "text-black" : "text-gray-700 hover:text-black"}
       after:content-[''] after:absolute after:left-0 after:-bottom-1
-      after:h-[2px] after:w-0 after:bg-indigo-600
+      after:h-[2px] after:w-0 after:bg-black
       after:transition-all after:duration-300
       hover:after:w-full
       ${isActive ? "after:w-full" : ""}`;
@@ -22,7 +22,7 @@ export default function Navbar() {
 
   return (
     <nav className="bg-white border-b shadow-sm w-screen fixed top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 py-4 grid grid-cols-12 gap-4 items-center">
+      <div className="max-w-7xl mx-auto px-4 py-2 grid grid-cols-12 gap-4 items-center">
         {/* Logo */}
         <div className="col-span-10 md:col-span-2 flex justify-start items-center">
           <NavLink to="/" className={linkClasses}>
@@ -33,22 +33,18 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Links */}
-        <div className="hidden md:flex md:col-span-8 gap-14 justify-center items-center">
+        <div className="hidden md:flex md:col-span-7 gap-14 justify-center items-center text-sm">
           <NavLink to="/" className={navItemClass}>Home</NavLink>
-          <NavLink to="/about" className={navItemClass}>About</NavLink>
-          <NavLink to="/services" className={navItemClass}>Services</NavLink>
+          <NavLink to="/about" className={navItemClass}>About Us</NavLink>
+          <NavLink to="/services" className={navItemClass}>Pricing</NavLink>
         </div>
 
         {/* Desktop CTA */}
-        <div className="hidden md:flex md:col-span-2 justify-end items-end">
-          <NavLink
-            to="https://wa.me/+916232933046"
-            className="bg-indigo-600 px-7 py-3 rounded-lg text-white hover:bg-indigo-700 transition font-semibold"
-          >
-            <div className="flex flex-row gap-3 jusitfy-center items-center">
-             <span><FaWhatsapp /></span>
-             <span>Get in touch</span>
-            </div>
+        <div className="hidden md:flex md:col-span-3 justify-end items-end">
+          <NavLink to="https://wa.me/+916232933046">
+            <button className="flex items-center gap-2 bg-[#4867fa] hover:bg-blue-700 text-white font-semibold text-base px-5 py-3 rounded-lg shadow-md transition-colors duration-200">
+              <FaWhatsapp size={23} /> <span className="text-md">Book Free Demo</span>
+            </button>
           </NavLink>
         </div>
 

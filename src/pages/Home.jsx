@@ -1,13 +1,18 @@
 import { NavLink } from 'react-router-dom'
-import Contact from './Contact'
-import ImageCarousel from '../components/ImageCarousel';
 import Accordian from "../components/Accordion"
+import Hero from '../components/Hero';
+import TeamOfAgentsHero,{HeroCTA} from '../components/Teamofagentshero';
+import BusinessCategories from '../components/Businesscategories';
+import MeetYourAITeam from '../components/Meetyouraiteam';
+import VideoTestimonials from '../components/Videotestimonials';
+import RealStoriesResults from '../components/Realstoriesresults';
+import TrustedByIndustries from '../components/Trustedbyindustries'
 
 export default function Home() {
     return (
         <div className="bg-gray-50 text-gray-800">
             {/* Hero Section */}
-            <section className="bg-white">
+            {/* <section className="bg-white">
                 <div className="max-w-7xl mx-auto px-6 py-24 text-center">
                         <h2 className="text-6xl font-semibold leading-tight mb-6">
                             Build Modern Web Experiences <br />With <span className='text-6xl text-4xl font-bold bg-gradient-to-r from-violet-600 via-blue-600 to-teal-600 bg-clip-text text-transparent'>Confidence</span>
@@ -31,27 +36,35 @@ export default function Home() {
                         </NavLink>
                     </div>
                 </div>
-            </section>
-
+            </section> */}
+            <Hero/>
+            <TeamOfAgentsHero/>
+            <BusinessCategories/>
+            <MeetYourAITeam/>
+            <VideoTestimonials/>
+            <RealStoriesResults/>
+            <TrustedByIndustries/>
+            <Accordian />
+            <HeroCTA />
             {/* Features */}
-            <section
+            {/* <section
                 id="features"
                 className="py-28 bg-gradient-to-b from-gray-50 to-white"
                 >
-                <div className="max-w-7xl mx-auto px-6">
+                <div className="max-w-7xl mx-auto px-6"> */}
                     {/* Section Header */}
-                    <div className="text-center max-w-3xl mx-auto mb-20">
+                    {/* <div className="text-center max-w-3xl mx-auto mb-20">
                     <h3 className="text-4xl font-extrabold mb-4">
                         Why Choose Our Platform
                     </h3>
                     <p className="text-gray-600 text-lg">
                         Built with modern technologies, performance, and scalability in mind.
                     </p>
-                    </div>
+                    </div> */}
 
                     {/* Feature Cards */}
-                    <div className="grid gap-10 md:grid-cols-3">
-                    {[
+                    {/* <div className="grid gap-10 md:grid-cols-3"> */}
+                    {/* {[
                         {
                         title: "Fast Development",
                         desc: "Build and ship applications rapidly using proven tools and best practices.",
@@ -67,46 +80,46 @@ export default function Home() {
                         desc: "Security-first approach to safeguard your users and data.",
                         icon: "🔒",
                         },
-                    ].map((feature, i) => (
-                        <div
+                    ].map((feature, i) => ( */}
+                        {/* <div
                         key={i}
                         className="group relative rounded-2xl p-[1px] bg-gradient-to-r from-violet-600 via-blue-600 to-teal-600"
                         >
-                        <div className="h-full rounded-2xl bg-white p-8 transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-2xl">
+                        <div className="h-full rounded-2xl bg-white p-8 transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-2xl"> */}
                             {/* Icon */}
-                            <div className="w-12 h-12 flex items-center justify-center rounded-xl mb-6 bg-gradient-to-r from-violet-600 via-blue-600 to-teal-600 text-white text-xl">
+                            {/* <div className="w-12 h-12 flex items-center justify-center rounded-xl mb-6 bg-gradient-to-r from-violet-600 via-blue-600 to-teal-600 text-white text-xl">
                             {feature.icon}
-                            </div>
+                            </div> */}
 
                             {/* Content */}
-                            <h4 className="text-xl font-semibold mb-3 group-hover:text-indigo-600 transition">
+                            {/* <h4 className="text-xl font-semibold mb-3 group-hover:text-indigo-600 transition">
                             {feature.title}
-                            </h4>
+                            </h4> */}
 
-                            <p className="text-gray-600 leading-relaxed">
+                            {/* <p className="text-gray-600 leading-relaxed">
                             {feature.desc}
-                            </p>
+                            </p> */}
 
                             {/* Hover underline */}
-                            <div className="mt-6 h-[2px] w-0 bg-gradient-to-r from-violet-600 to-teal-600 group-hover:w-full transition-all duration-300" />
+                            {/* <div className="mt-6 h-[2px] w-0 bg-gradient-to-r from-violet-600 to-teal-600 group-hover:w-full transition-all duration-300" />
                         </div>
-                        </div>
-                    ))}
-                    </div>
+                        </div> */}
+                    {/* ))} */}
+                    {/* </div>
                 </div>
-            </section>
+            </section> */}
 
 
             {/* About */}
-            <section
+            {/* <section
                 id="about"
                 className="relative py-24 bg-gradient-to-br from-indigo-50 via-white to-purple-50"
                 >
                 <div className="max-w-5xl mx-auto px-6">
                     <div className="relative overflow-hidden rounded-3xl bg-white/80 backdrop-blur-xl shadow-xl border border-white/20">
-                    
+                     */}
                     {/* Gradient Accent */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-purple-500/10" />
+                    {/* <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-purple-500/10" />
 
                     <div className="relative p-10 md:p-16 text-center">
                         <h3 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
@@ -121,12 +134,9 @@ export default function Home() {
                     </div>
                     </div>
                 </div>
-                </section>
-
-            <Accordian />
-
+                </section> */}
             {/* Call to Action */}
-            <section className="py-24 bg-gradient-to-r from-indigo-600 to-purple-600">
+            {/* <section className="py-24 bg-gradient-to-r from-indigo-600 to-purple-600">
                 <div className="max-w-4xl mx-auto px-6 text-center text-white">
                 <h2 className="text-4xl font-bold mb-6">
                     Let’s Build Something Great Together
@@ -141,10 +151,10 @@ export default function Home() {
                     </button>
                 </NavLink>
                 </div>
-            </section>
+            </section> */}
 
             {/* Footer */}
-            <footer className="bg-gray-900 text-gray-400">
+            {/* <footer className="bg-gray-900 text-gray-400">
                 <div className="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center text-sm">
                     <p>© 2026 YourBrand. All rights reserved.</p>
                     <div className="space-x-4">
@@ -156,7 +166,7 @@ export default function Home() {
                         </a>
                     </div>
                 </div>
-            </footer>
+            </footer> */}
         </div>
     );
 };

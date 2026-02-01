@@ -1,38 +1,93 @@
 import { NavLink } from "react-router-dom";
+import Hero from "../components/Hero"
+import about from "../assets/about-us.webp"
+import WhyWeStarted from "../components/WhyWeStarted"
 
 export default function About() {
     return (
-        <main className="bg-gradient-to-br from-indigo-50 via-white to-purple-50">
-      
-      {/* Hero Section */}
-      <section className="py-24">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <main>
+
+        <section className="bg-white my-4">
+          <div className="max-w-7xl mx-auto px-6 pt-32 text-center">
+            <h2 className="text-5xl font-bold leading-tight mb-6">
+            Helping Local Business' <br />Grow, <span className='text-5xl text-4xl font-bold bg-gradient-to-r from-violet-600 via-blue-600 to-teal-600 bg-clip-text text-transparent'>Effortlessly</span>
+            </h2>
+            <p className="text-xs mx-auto text-gray-600">We are an all-in-one Marketing AI platform that delivers actual revenue growth for small business owners, all on auto-pilot.</p>
+          </div>
+        </section>
+
+        <div className="w-full md:w-4/5 lg:w-3/4 mx-auto h-full flex-shrink-0 overflow-hidden rounded-lg">
+          <img 
+            src={about} 
+            alt="about"
+            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+          />
+        </div>
+    <section className="py-16 px-4 bg-gray-50">
+      <div className="max-w-6xl mx-auto">
+        
+        {/* Main Heading */}
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-gray-900 mb-6">
+          We're Building for Small Business Owners
+        </h2>
+
+        {/* Description */}
+        <p className="text-lg md:text-xl text-center text-gray-600 mb-12 max-w-4xl mx-auto leading-relaxed">
+          93% of small business owners struggle to manage their marketing. They are losing customers to bigger brands and chains. Grexa empowers them the tech advantage they've never had, to grow and compete with confidence.
+        </p>
+
+        {/* Stats Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           
-          <div>
-            <h1 className="text-5xl font-extrabold leading-tight bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-              Building Digital Experiences That Matter
-            </h1>
-            <p className="mt-6 text-lg text-gray-600 leading-relaxed">
-              We are a team of developers and designers focused on creating
-              scalable, high-performance web applications using modern
-              technologies and clean architecture principles.
+          {/* Stat 1 */}
+          <div className="text-center">
+            <h3 className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">
+              2.3+ Crore
+            </h3>
+            <p className="text-base md:text-lg text-gray-700 font-medium">
+              Micro Businesses in India
             </p>
           </div>
 
-          {/* Illustration */}
-          <div className="relative">
-            <div className="absolute -inset-4 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-3xl blur-2xl opacity-20"></div>
-            <img
-              src="https://illustrations.popsy.co/gray/web-design.svg"
-              alt="Team Illustration"
-              className="relative rounded-3xl shadow-xl"
-            />
+          {/* Stat 2 */}
+          <div className="text-center">
+            <h3 className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">
+              32%+
+            </h3>
+            <p className="text-base md:text-lg text-gray-700 font-medium">
+              Contribution to India's GDP
+            </p>
+          </div>
+
+          {/* Stat 3 */}
+          <div className="text-center">
+            <h3 className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">
+              90%+
+            </h3>
+            <p className="text-base md:text-lg text-gray-700 font-medium">
+              Never tried Digital Marketing
+            </p>
           </div>
         </div>
-      </section>
+
+        {/* CTA Button */}
+        <div className="flex justify-center">
+          <button className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3.5 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105">
+            <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+            Book Free Demo
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <WhyWeStarted/>
 
       {/* About Card Section */}
-      <section className="py-20">
+      {/* <section className="py-20">
         <div className="max-w-5xl mx-auto px-6">
           <div className="rounded-3xl bg-white/80 backdrop-blur-xl shadow-xl border border-white/20 p-10 md:p-16 text-center">
             <h2 className="text-4xl font-bold mb-6">Who We Are</h2>
@@ -44,7 +99,7 @@ export default function About() {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Values Section */}
       <section className="py-24">
@@ -85,7 +140,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-r from-indigo-600 to-purple-600">
         <div className="max-w-4xl mx-auto px-6 text-center text-white">
